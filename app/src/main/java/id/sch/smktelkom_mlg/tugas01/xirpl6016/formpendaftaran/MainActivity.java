@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         hb1 = (CheckBox) findViewById(R.id.hobi1);
         hb2 = (CheckBox) findViewById(R.id.hobi2);
         hb3 = (CheckBox) findViewById(R.id.hobi3);
-        squad = (Spinner) findViewById(R.id.kuku);
+        squad = (Spinner) findViewById(R.id.layer);
 
 
         Join.setOnClickListener(new View.OnClickListener() {
