@@ -46,33 +46,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 doProcess();
                 doClick();
+                doSatu();
+                doDua();
             }
         });
 
     }
 
-    private void doClick() {
-
-
-        String nyam = squad.getSelectedItem().toString();
-        gabung4.setText("Angkatan " + nyam);
-
-        String jurus = null;
-        if
-                (rpl.isChecked())
-        {
-            jurus = rpl.getText().toString();
-        }
-        else if(tkj.isChecked())
-        {
-            jurus = tkj.getText().toString();
-        }
-        if (jurus == null) {
-            gabung2.setText("Anda Belum Memilih Jurusan");
-        } else {
-            gabung2.setText("Jurusan Anda " + jurus);
-        }
-
+    private void doDua() {
         String hobi = "Anda berminat mengikuti:\n";
         int startlen = hobi.length();
         if (hb1.isChecked()) hobi += hb1.getText() + "\n";
@@ -82,7 +63,25 @@ public class MainActivity extends AppCompatActivity {
         if (hobi.length() == startlen) hobi += "Anda Belum Memilih perminatan Hobi";
 
         gabung3.setText(hobi);
+    }
 
+    private void doSatu() {
+        String jurus = null;
+        if
+                (rpl.isChecked()) {
+            jurus = rpl.getText().toString();
+        } else if (tkj.isChecked()) {
+            jurus = tkj.getText().toString();
+        }
+        if (jurus == null) {
+            gabung2.setText("Anda Belum Memilih Jurusan");
+        } else {
+            gabung2.setText("Jurusan Anda " + jurus);
+        }
+    }
+
+    private void doClick() {
+        gabung4.setText("Angkatan " + squad.getSelectedItem().toString());
     }
 
     private void doProcess() {
