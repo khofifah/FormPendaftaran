@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     TextView gabung2;
     TextView gabung3;
     TextView gabung4;
+    TextView gabung5;
     CheckBox hb1, hb2, hb3;
     Spinner squad;
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         gabung2 = (TextView) findViewById(R.id.gabung2);
         gabung3 = (TextView) findViewById(R.id.gabung3);
         gabung4 = (TextView) findViewById(R.id.gabung4);
+        gabung5 = (TextView) findViewById(R.id.gabung5);
         hb1 = (CheckBox) findViewById(R.id.hobi1);
         hb2 = (CheckBox) findViewById(R.id.hobi2);
         hb3 = (CheckBox) findViewById(R.id.hobi3);
@@ -81,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void doClick() {
-        gabung4.setText("Angkatan " + squad.getSelectedItem().toString());
+        gabung4.setText("Part of " + squad.getSelectedItem().toString());
+        gabung5.setText("Jangan lupa setiap hari Minggu mengikuti kelas hobi kamu secara disiplin. OK?");
     }
 
     private void doProcess() {
