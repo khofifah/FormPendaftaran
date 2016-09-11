@@ -7,15 +7,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText etNama;
-    /*RadioButton rpl;
-    RadioButton tkj;*/
-    RadioGroup jurusan;
+    RadioButton rpl;
+    RadioButton tkj;
     Button Join;
     TextView gabung;
     TextView gabung2;
@@ -30,9 +28,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etNama = (EditText) findViewById(R.id.editTextNama);
-        /*rpl = (RadioButton) findViewById(R.id.rpl);
-        tkj = (RadioButton) findViewById(R.id.tkj);*/
-        jurusan = (RadioGroup) findViewById(R.id.grup);
+        rpl = (RadioButton) findViewById(R.id.rpl);
+        tkj = (RadioButton) findViewById(R.id.tkj);
         Join = (Button) findViewById(R.id.button);
         gabung = (TextView) findViewById(R.id.gabung);
         gabung2 = (TextView) findViewById(R.id.gabung2);
@@ -56,24 +53,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void doClick() {
 
-        String jurus = null;
 
-        if (jurusan.getCheckedRadioButtonId() != -1) {
-            RadioButton tel = (RadioButton)
-                    findViewById(jurusan.getCheckedRadioButtonId());
-            jurus = tel.getText().toString();
-        }
 
         gabung4.setText("Angkatan " + squad.getSelectedItem().toString());
 
-        /*if (rpl.isChecked())
+        String jurus = null;
+        if
+                (rpl.isChecked())
         {
             jurus = rpl.getText().toString();
         }
         else if(tkj.isChecked())
         {
             jurus = tkj.getText().toString();
-        }*/
+        }
         if (jurus == null) {
             gabung2.setText("Anda Belum Memilih Jurusan");
         } else {
