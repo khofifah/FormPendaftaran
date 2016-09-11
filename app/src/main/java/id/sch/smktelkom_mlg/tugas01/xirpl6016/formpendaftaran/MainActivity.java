@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
     private void doClick() {
 
 
-
-        gabung4.setText("Angkatan " + squad.getSelectedItem().toString());
+        String nyam = squad.getSelectedItem().toString();
+        gabung4.setText("Angkatan " + nyam);
 
         String jurus = null;
         if
